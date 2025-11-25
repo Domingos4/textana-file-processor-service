@@ -21,7 +21,7 @@ import java.util.List;
 @Component
 public class FileAnalysisQueueListener {
     public static final int MAX_NUMBER_MESSAGES_SQS = 10;
-    public static final int WAIT_TIME_SECONDS_SQS = 10;
+    public static final int WAIT_TIME_SECONDS_SQS = 20;
     public static final int VISIBILITY_TIMEOUT_SQS = 30;
 
     private final SqsClient sqsClient;

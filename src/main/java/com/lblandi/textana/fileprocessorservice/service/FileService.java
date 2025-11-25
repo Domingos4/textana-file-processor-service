@@ -13,4 +13,9 @@ public interface FileService {
      * @return the content of the file as a String
      */
     String getFileContent(String fileIdentifier);
+
+    /**
+     * Deletes all files stored in the S3 bucket configured in application.properties
+     */
+    void deleteAllFiles();
 }

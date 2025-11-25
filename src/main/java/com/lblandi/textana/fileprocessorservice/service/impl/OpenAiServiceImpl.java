@@ -4,7 +4,6 @@ import com.lblandi.textana.fileprocessorservice.enumerated.EmotionDetectedEnum;
 import com.lblandi.textana.fileprocessorservice.service.AiService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -26,6 +25,7 @@ public class OpenAiServiceImpl implements AiService {
 
     @Override
     public String resumeText(String text) {
+        // log prompt, only the first 20 characters
         log.debug("Trying to resume text for text: {}", text.substring(0, 20) + "...");
         return sanitizeResponse(chatClient.prompt(PROMPT_RESUME.formatted(text)).call().content());
     }
@@ -38,10 +38,12 @@ public class OpenAiServiceImpl implements AiService {
     }
 
     private String sanitizeResponse(String response) {
+        // remove all whitespace characters
         return response == null ? "" : response.replaceAll("\\s+", " ").trim();
     }
 
     private EmotionDetectedEnum evaluateEmotion(String emotion) {
+        // cast string as enum, if fail just return neutral value
         try {
             return EmotionDetectedEnum.valueOf(emotion.toUpperCase());
         } catch (IllegalArgumentException e) {
